@@ -1,0 +1,18 @@
+controller_manager_ns: controller_manager
+controller_list:
+  - name: final_v0/final_v0_joint_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4      
+  - name: final_v0/gripper_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - joint5
+      - joint6

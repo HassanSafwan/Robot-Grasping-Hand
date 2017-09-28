@@ -1,0 +1,21 @@
+<launch>
+
+
+  <!-- Launch Gazebo  -->
+  <include file="$(find final_v0)/launch/gazebo.launch" />   
+
+  <!-- ros_control seven dof arm launch file -->
+  <include file="$(find final_v0)/launch/final_v0_gazebo_states.launch" />   
+
+  <!-- ros_control position control dof arm launch file -->
+  <!--<include file="$(find final_v0)/launch/final_v0_gazebo_position.launch" />  -->
+
+  <!-- ros_control trajectory control dof arm launch file -->
+  <include file="$(find final_v0)/launch/final_v0_trajectory_controller.launch" />    
+
+  <!-- moveit launch file -->
+  <include file="$(find final_v0_config_generated)/launch/moveit_planning_execution.launch" />   
+
+
+
+</launch>
